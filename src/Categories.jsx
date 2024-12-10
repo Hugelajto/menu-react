@@ -3,7 +3,12 @@ const Categories = ({ categories, filterItems }) => {
     <div className="btn-container">
       {categories.map((category) => {
         return (
-          <button type="button" className="btn" key={category}>
+          <button
+            type="button"
+            className="btn"
+            key={category}
+            onClick={() => filterItems(category)}
+          >
             {category}
           </button>
         );
@@ -12,4 +17,3 @@ const Categories = ({ categories, filterItems }) => {
   );
 };
 export default Categories;
-
